@@ -4,6 +4,8 @@
     align-items: center;
     background-color: white;
     padding: 10px 20px;
+    position: relative;
+    z-index: 10; /* Ensure header is above other content */
 }
 
 .logo img {
@@ -22,4 +24,51 @@
     text-decoration: none;
     color: red;
     font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: red;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        z-index: 10; /* Ensure nav is above other content */
+        transition: max-height 0.5s ease-in-out;
+        overflow: hidden;
+        max-height: 0;
+        
+    }
+
+    .nav.open {
+        max-height: 300px; /* Adjust as needed */
+     
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;   
+        margin: 20px 30px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
 }

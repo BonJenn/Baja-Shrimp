@@ -1,13 +1,19 @@
-import React from 'react';
-import styles from '../styles/Header.module.css'; // Assuming you have a CSS file for styling
+import React, { useState } from 'react';
+import styles from '../styles/Header.module.css';
 
 const Header = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
                 <img src="/images/baja_shrimp_logo.png" alt="The Baja Shrimp Logo" />
             </div>
-            <nav className={styles.nav}>
+            <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#menu">Menu</a></li>
@@ -15,6 +21,11 @@ const Header = () => {
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <div className={styles.hamburger} onClick={toggleMenu}>
+                <div className={styles.bar}></div>
+                <div className={styles.bar}></div>
+                <div className={styles.bar}></div>
+            </div>
         </header>
     );
 };
