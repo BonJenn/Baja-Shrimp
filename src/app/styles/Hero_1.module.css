@@ -1,0 +1,84 @@
+/* Hero_1.module.css */
+
+.heroContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d52b1e; /* Red background */
+    color: white;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+  
+  .textContainer {
+    flex: 1;
+    min-width: 300px;
+    z-index: 2;
+    padding-right: 20px;
+  }
+  
+  .heroTitle {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .heroButton {
+    background-color: #f5f5dc; /* Light beige color for the button */
+    color: #d52b1e; /* Button text color matches background */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .heroButton:hover {
+    background-color: #e4d9b4; /* Slightly darker shade on hover */
+  }
+  
+  .videoContainer {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+    z-index: 1;
+  }
+  
+  .heroVideo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .heroContainer {
+      flex-direction: column-reverse; /* Moves video above text */
+      text-align: center;
+    }
+  
+    .textContainer {
+      padding-right: 0;
+    }
+  
+    .videoContainer {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .heroTitle {
+      font-size: 2.5em;
+    }
+  
+    .heroButton {
+      font-size: 1em;
+    }
+  }
+  
