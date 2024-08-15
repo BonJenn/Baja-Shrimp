@@ -2,6 +2,14 @@ import React from 'react';
 import styles from '../styles/Hero_1.module.css';
 
 const Hero1 = () => {
+  const scrollToMenu = (e) => {
+    e.preventDefault();
+    const menuSection = document.getElementById('menu');
+    if (menuSection) {
+      menuSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className={styles.heroWrapper}>
       <div className={styles.videoContainer}>
@@ -10,7 +18,7 @@ const Hero1 = () => {
       <div className={styles.heroContainer}>
         <div className={styles.textContainer}>
           <h1 className={styles.heroTitle}>Where The Flavor of the Coast Meets the Streets</h1>
-          <button className={styles.heroButton}>VIEW MENU</button>
+          <button className={styles.heroButton} onClick={scrollToMenu}>VIEW MENU</button>
         </div>
       </div>
     </div>
