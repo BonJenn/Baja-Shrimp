@@ -1,0 +1,29 @@
+.footer {
+  background-color: #1f2937;
+  color: white;
+  padding: 1rem 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+
+
+
+.link {
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: white;
+}
