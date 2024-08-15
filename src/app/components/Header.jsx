@@ -8,6 +8,15 @@ const Header = () => {
         setIsOpen(!isOpen);
     };
 
+    const scrollToMenu = (e) => {
+        e.preventDefault();
+        const menuSection = document.getElementById('menu');
+        if (menuSection) {
+            menuSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        setIsOpen(false);
+    };
+
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
@@ -16,7 +25,7 @@ const Header = () => {
             <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#menu" onClick={scrollToMenu}>Menu</a></li>
                     <li><a href="#catering">Catering</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
