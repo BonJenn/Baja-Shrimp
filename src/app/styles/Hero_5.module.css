@@ -1,0 +1,27 @@
+.featuredDishesContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    background-color: #f5f5f5;
+  }
+  
+  .dishCard {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 30%;
+  }
+  
+  .dishImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  .dishName {
+    font-size: 1.5em;
+    color: #d52b1e;
+    margin: 10px 0;
+  }

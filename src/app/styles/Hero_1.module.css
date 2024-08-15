@@ -1,3 +1,6 @@
+
+
+
 .heroWrapper {
   position: relative;
   overflow: hidden;
@@ -6,6 +9,7 @@
 }
 
 .videoContainer {
+  
   position: absolute;
   top: 0;
   right: 0;
@@ -21,6 +25,7 @@
 }
 
 .heroContainer {
+  font-family: 'Francois One', sans-serif;
   position: absolute;
   top: 0;
   left: 0;
