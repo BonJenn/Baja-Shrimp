@@ -2,26 +2,54 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 40px;
-    background-color: #f5f5f5;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
   }
   
   .dishCard {
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    width: 30%;
+    width: 28%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+  }
+  
+  .dishCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   }
   
   .dishImage {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .dishCard:hover .dishImage {
+    transform: scale(1.05);
   }
   
   .dishName {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    font-weight: 600;
     color: #d52b1e;
-    margin: 10px 0;
+    margin: 20px 0;
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 0.5px;
+  }
+  
+  @media (max-width: 768px) {
+    .featuredDishesContainer {
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+  
+    .dishCard {
+      width: 80%;
+      margin-bottom: 30px;
+    }
   }

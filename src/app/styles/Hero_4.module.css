@@ -1,11 +1,29 @@
 .textSection {
-    color: #d52b1e;
+    font-family: 'Manrope', sans-serif;
+    color: var(--baja-red);
     background-color: #ffffff;
-    padding: 20px;
-    margin: 20px;
+    padding: 80px;
     height: 100%;
     width: 100%;
     font-size: 1.5rem;
     line-height: 1.5;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paragraph {
+    margin-bottom: 2rem;
+}
+
+.logoContainer {
+    margin-top: 2rem;
+}
+
+.logo {
+    margin-top: 30px;
+    width: 70px;
+    height: auto;
+    opacity: 0.5;
 }
