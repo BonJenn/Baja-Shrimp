@@ -47,6 +47,7 @@
 
 .textContainer {
   max-width: 80%;
+  padding-right: 100px;
 }
 
 .heroTitle {
@@ -54,7 +55,6 @@
   font-weight: bold;
   margin: 0 0 20px 0;
   line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .heroButton {
