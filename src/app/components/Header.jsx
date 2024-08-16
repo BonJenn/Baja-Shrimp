@@ -17,6 +17,15 @@ const Header = () => {
         setIsOpen(false);
     };
 
+    const scrollToContact = (e) => {
+        e.preventDefault();
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        setIsOpen(false);
+    };
+
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
@@ -27,7 +36,7 @@ const Header = () => {
                     <li><a href="#home">Home</a></li>
                     <li><a href="#menu" onClick={scrollToMenu}>Menu</a></li>
                     <li><a href="#catering">Catering</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" onClick={scrollToContact}>Contact</a></li>
                 </ul>
             </nav>
             <div className={styles.hamburger} onClick={toggleMenu}>

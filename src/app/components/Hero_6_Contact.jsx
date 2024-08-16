@@ -26,7 +26,7 @@ const Hero6 = () => {
   };
 
   return (
-    <div className={styles.contactContainer}>
+    <div id="contact" className={styles.contactContainer}>
       <h2 className={styles.contactTitle}>Contact Us</h2>
       <form onSubmit={handleSubmit} className={styles.contactForm}>
         <div className={styles.formGroup}>
