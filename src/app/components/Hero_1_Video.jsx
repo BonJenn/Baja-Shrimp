@@ -17,7 +17,7 @@ const Hero1 = () => {
       </div>
       <div className={styles.heroContainer}>
         <div className={styles.textContainer}>
-          <h1 className={styles.heroTitle}>Where The Flavors of the Coast Meets the Streets</h1>
+          <h1 className={styles.heroTitle}>Where The Flavors of the Coast Meet the Streets</h1>
           <button className={styles.heroButton} onClick={scrollToMenu}>VIEW MENU</button>
         </div>
       </div>
