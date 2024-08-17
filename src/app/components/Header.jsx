@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import styles from '../styles/Header.module.css';
+import Catering from './Catering';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isCateringOpen, setIsCateringOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -35,7 +37,7 @@ const Header = () => {
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#menu" onClick={scrollToMenu}>Menu</a></li>
-                    <li><a href="#catering">Catering</a></li>
+                    <li><a href="#" onClick={() => setIsCateringOpen(true)}>Catering</a></li>
                     <li><a href="#contact" onClick={scrollToContact}>Contact</a></li>
                 </ul>
             </nav>
@@ -44,6 +46,7 @@ const Header = () => {
                 <div className={styles.bar}></div>
                 <div className={styles.bar}></div>
             </div>
+            <Catering isOpen={isCateringOpen} onClose={() => setIsCateringOpen(false)} />
         </header>
     );
 };
