@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Header.module.css';
 import Catering from './Catering';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isCateringOpen, setIsCateringOpen] = useState(false);
+    const menuRef = useRef(null);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                closeMenu();
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     const scrollToMenu = (e) => {
         e.preventDefault();
@@ -16,7 +34,7 @@ const Header = () => {
         if (menuSection) {
             menuSection.scrollIntoView({ behavior: 'smooth' });
         }
-        setIsOpen(false);
+        closeMenu();
     };
 
     const scrollToContact = (e) => {
@@ -25,7 +43,7 @@ const Header = () => {
         if (contactSection) {
             contactSection.scrollIntoView({ behavior: 'smooth' });
         }
-        setIsOpen(false);
+        closeMenu();
     };
 
     return (
@@ -33,11 +51,11 @@ const Header = () => {
             <div className={styles.logo}>
                 <img src="/images/baja_shrimp_logo.png" alt="The Baja Shrimp Logo" />
             </div>
-            <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
+            <nav ref={menuRef} className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home" onClick={closeMenu}>Home</a></li>
                     <li><a href="#menu" onClick={scrollToMenu}>Menu</a></li>
-                    <li><a href="#" onClick={() => setIsCateringOpen(true)}>Catering</a></li>
+                    <li><a href="#" onClick={() => { setIsCateringOpen(true); closeMenu(); }}>Catering</a></li>
                     <li><a href="#contact" onClick={scrollToContact}>Contact</a></li>
                 </ul>
             </nav>
