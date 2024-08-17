@@ -1,29 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import styles from '../styles/Hero_6.module.css';
 
 const Hero6 = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const [state, handleSubmit] = useForm("mvgpqlzv");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    // Reset form after submission
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
+  if (state.succeeded) {
+    return (
+      <div id="contact" className={styles.contactContainer}>
+        <h2 className={styles.contactTitle}>Contact Us</h2>
+        <p className={styles.successMessage}>Thanks for your message! We'll get back to you shortly.</p>
+      </div>
+    );
+  }
 
   return (
     <div id="contact" className={styles.contactContainer}>
@@ -32,34 +21,43 @@ const Hero6 = () => {
         <div className={styles.formGroup}>
           <label htmlFor="name">Name:</label>
           <input
-            type="text"
             id="name"
+            type="text" 
             name="name"
-            value={formData.name}
-            onChange={handleChange}
             required
+          />
+          <ValidationError 
+            prefix="Name" 
+            field="name"
+            errors={state.errors}
           />
         </div>
         <div className={styles.formGroup}>
           <label htmlFor="email">Email:</label>
           <input
-            type="email"
             id="email"
+            type="email" 
             name="email"
-            value={formData.email}
-            onChange={handleChange}
             required
+          />
+          <ValidationError 
+            prefix="Email" 
+            field="email"
+            errors={state.errors}
           />
         </div>
         <div className={styles.formGroup}>
           <label htmlFor="subject">Subject:</label>
           <input
-            type="text"
             id="subject"
+            type="text" 
             name="subject"
-            value={formData.subject}
-            onChange={handleChange}
             required
+          />
+          <ValidationError 
+            prefix="Subject" 
+            field="subject"
+            errors={state.errors}
           />
         </div>
         <div className={styles.formGroup}>
@@ -67,12 +65,17 @@ const Hero6 = () => {
           <textarea
             id="message"
             name="message"
-            value={formData.message}
-            onChange={handleChange}
             required
-          ></textarea>
+          />
+          <ValidationError 
+            prefix="Message" 
+            field="message"
+            errors={state.errors}
+          />
         </div>
-        <button type="submit" className={styles.submitButton}>Send Message</button>
+        <button type="submit" disabled={state.submitting} className={styles.submitButton}>
+          Send Message
+        </button>
       </form>
     </div>
   );
