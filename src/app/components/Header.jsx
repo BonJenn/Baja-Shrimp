@@ -8,7 +8,7 @@ const Header = () => {
     const menuRef = useRef(null);
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
+        setIsOpen(prevState => !prevState);
     };
 
     const closeMenu = () => {
@@ -59,7 +59,7 @@ const Header = () => {
                     <li><a href="#contact" onClick={scrollToContact}>Contact</a></li>
                 </ul>
             </nav>
-            <div className={styles.hamburger} onClick={toggleMenu}>
+            <div className={styles.hamburger} onClick={toggleMenu} style={{ zIndex: 11 }}>
                 <div className={styles.bar}></div>
                 <div className={styles.bar}></div>
                 <div className={styles.bar}></div>

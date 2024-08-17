@@ -57,19 +57,20 @@
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 100%; /* Change this to position it right below the header */
+        top: 100%;
         left: 0;
         background-color: white;
-        z-index: 10; /* Ensure nav is above other content */
-        transition: max-height 0.5s ease-in-out;
+        z-index: 10;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
         overflow: hidden;
         max-height: 0;
+        opacity: 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .nav.open {
-        max-height: 300px; /* Adjust as needed */
-     
+        max-height: 300px;
+        opacity: 1;
     }
 
     .nav ul {
