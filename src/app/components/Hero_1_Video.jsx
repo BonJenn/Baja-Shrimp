@@ -14,6 +14,7 @@ const Hero1 = () => {
     <div className={styles.heroWrapper}>
       <div className={styles.videoContainer}>
         <video className={styles.heroVideo} src="/images/main_video.mp4" autoPlay loop muted />
+        <img className={styles.mobileImage} src="/images/carousel/carousel_image_4.jpeg" alt="Baja Shrimp" />
       </div>
       <div className={styles.heroContainer}>
         <div className={styles.textContainer}>
