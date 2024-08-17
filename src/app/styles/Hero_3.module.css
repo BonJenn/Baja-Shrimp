@@ -30,3 +30,14 @@
     transform: translateX(-50%);
   }
 }
+
+@media (max-width: 768px) {
+  .carouselContainer {
+    height: 400px;
+  }
+
+  .carouselImage {
+    width: 80%;
+    height: 90%;
+  }
+}

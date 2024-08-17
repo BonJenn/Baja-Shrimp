@@ -22,8 +22,19 @@
 }
 
 .logo {
-    margin-top: 30px;
-    width: 70px;
+    margin-top: 5px;
+    width: 250px;
     height: auto;
     opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .textSection {
+        font-size: 1.2rem;
+        padding: 40px;
+    }
+
+    .logo {
+        width: 150px;
+    }
 }
