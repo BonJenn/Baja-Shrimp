@@ -84,46 +84,51 @@
 
 .popupContent {
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  max-width: 500px;
+  max-height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   backdrop-filter: blur(5px);
+  overflow-y: auto;
 }
 
 .popupImage {
   width: 100%;
   height: auto;
-  max-height: 40%;
-  object-fit: cover;
+  max-height: 45%;
+  object-fit: contain;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .popupTitle {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  font-size: 1.3em;
+  margin-bottom: 8px;
   color: var(--baja-red);
 }
 
 .popupDescription {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   color: var(--baja-blue);
+  font-size: 0.9em;
 }
 
 .closeButton {
   background-color: var(--baja-red);
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-size: 0.9em;
+  margin-top: 10px;
 }
 
 .closeButton:hover {
@@ -132,25 +137,26 @@
 
 @media (max-width: 768px) {
   .popupContent {
-    padding: 15px;
+    width: 90%;
+    padding: 12px;
   }
 
   .popupImage {
-    max-height: 30%;
+    max-height: 40%;
   }
 
   .popupTitle {
-    font-size: 1.2em;
-    margin-bottom: 5px;
+    font-size: 1.1em;
+    margin-bottom: 6px;
   }
 
   .popupDescription {
-    font-size: 0.9em;
-    margin-bottom: 10px;
+    font-size: 0.8em;
+    margin-bottom: 8px;
   }
 
   .closeButton {
-    padding: 8px 16px;
-    font-size: 0.9em;
+    padding: 6px 12px;
+    font-size: 0.8em;
   }
 }
