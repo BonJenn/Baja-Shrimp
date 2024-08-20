@@ -6,18 +6,24 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isCateringOpen, setIsCateringOpen] = useState(false);
     const menuRef = useRef(null);
+    const hamburgerRef = useRef(null);
 
-    const toggleMenu = () => {
+    const openMenu = () => setIsOpen(true);
+    const closeMenu = () => setIsOpen(false);
+
+    const toggleMenu = (e) => {
+        e.stopPropagation();
         setIsOpen(prevState => !prevState);
-    };
-
-    const closeMenu = () => {
-        setIsOpen(false);
     };
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
+            if (
+                menuRef.current &&
+                !menuRef.current.contains(event.target) &&
+                hamburgerRef.current &&
+                !hamburgerRef.current.contains(event.target)
+            ) {
                 closeMenu();
             }
         };
@@ -59,7 +65,12 @@ const Header = () => {
                     <li><a href="#contact" onClick={scrollToContact}>Contact</a></li>
                 </ul>
             </nav>
-            <div className={styles.hamburger} onClick={toggleMenu} style={{ zIndex: 11 }}>
+            <div 
+                ref={hamburgerRef}
+                className={styles.hamburger} 
+                onClick={toggleMenu} 
+                style={{ zIndex: 11 }}
+            >
                 <div className={styles.bar}></div>
                 <div className={styles.bar}></div>
                 <div className={styles.bar}></div>
