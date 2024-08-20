@@ -9,7 +9,7 @@ const images = [
   '/images/carousel/carousel_image_5.jpeg',
   '/images/carousel/carousel_image_6.jpeg',
   '/images/carousel/carousel_image_7.jpeg',
-  '/images/carousel/carousel_image_8.jpeg',  // Add more images as needed
+  '/images/carousel/carousel_image_8.jpeg',
 ];
 
 const Hero3 = () => {
