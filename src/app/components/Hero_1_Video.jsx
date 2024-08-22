@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '../styles/Hero_1.module.css';
+import styles from '../styles/Hero_1_Video.module.css';
 
-const Hero1 = () => {
+const Hero1_Video = () => {
   const scrollToMenu = (e) => {
     e.preventDefault();
     const menuSection = document.getElementById('menu');
@@ -24,6 +24,6 @@ const Hero1 = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Hero1;
+export default Hero1_Video;

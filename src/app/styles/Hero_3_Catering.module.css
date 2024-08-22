@@ -1,0 +1,92 @@
+.cateringContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 40px;
+}
+
+.cateringContent {
+  background-color: rgba(213, 43, 30, 0.9);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.cateringTitle {
+  font-family: 'Francois One', sans-serif;
+  font-size: 3.5em;
+  margin-bottom: 30px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.cateringDescription {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.3em;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.cateringButton {
+  font-family: 'Manrope', sans-serif;
+  background-color: white;
+  color: var(--baja-red);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cateringButton:hover {
+  background-color: var(--baja-blue);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.videoWrapper {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 16px 16px 0 var(--baja-light-blue);
+  margin-bottom: 20px;
+}
+
+.cateringVideo {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .cateringContainer {
+    padding: 60px 20px;
+  }
+
+  .cateringContent {
+    padding: 30px;
+  }
+
+  .cateringTitle {
+    font-size: 2.8em;
+  }
+
+  .cateringDescription {
+    font-size: 1.1em;
+  }
+
+  .cateringButton {
+    font-size: 1em;
+    padding: 12px 24px;
+  }
+}

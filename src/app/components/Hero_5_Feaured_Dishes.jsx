@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../styles/Hero_5.module.css';
+import styles from '../styles/Hero_5_Featured_Dishes.module.css';
 
 const dishes = [
   { 
@@ -23,7 +23,7 @@ const dishes = [
   },
 ];
 
-const Hero5 = () => {
+const Hero5_Featured_Dishes = () => {
   const [selectedDish, setSelectedDish] = useState(null);
 
   const openPopup = (dish) => {
@@ -59,4 +59,4 @@ const Hero5 = () => {
   );
 };
 
-export default Hero5;
+export default Hero5_Featured_Dishes;

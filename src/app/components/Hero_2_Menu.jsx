@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '../styles/Hero_2.module.css';
+import styles from '../styles/Hero_2_Menu.module.css';
 
-const Hero2 = () => {
+const Hero2_Menu = () => {
   return (
     <div id="menu" className={styles.heroContainer}>
       <div className={styles.textContainer}>
@@ -46,4 +46,4 @@ const Hero2 = () => {
   );
 };
 
-export default Hero2;
+export default Hero2_Menu;

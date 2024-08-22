@@ -1,0 +1,131 @@
+.heroWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; /* or any specific height you prefer */
+}
+
+.videoContainer {
+  
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%; /* Changed from 50% to 100% */
+  height: 100%;
+  z-index: 1;
+}
+
+.heroVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobileImage {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroContainer {
+  font-family: 'Francois One', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%; /* Adjust to control overlap */
+  height: 100%;
+  background-color: #d52b1e;
+  color: white;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  clip-path: polygon(
+    0 0, 100% 0, 
+    95% 10%, 90% 20%, 85% 30%, 80% 40%, 75% 50%, 
+    70% 60%, 65% 70%, 60% 80%, 55% 90%, 50% 100%, 
+    0 100%
+  );
+}
+
+.textContainer {
+  max-width: 80%;
+  padding-right: 100px;
+}
+
+.heroTitle {
+  font-size: 3.5em;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.heroButton {
+  font-family: 'Manrope', sans-serif;
+  background-color: #f5f5dc;
+  color: #d52b1e;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.heroButton:hover {
+  background-color: #d52b1e;
+  color: #f5f5dc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .heroContainer {
+    width: 100%;
+    clip-path: none;
+  }
+
+  .videoContainer {
+    width: 100%;
+    height: 50%;
+  }
+
+  .heroContainer {
+    top: 50%;
+    height: 50%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .textContainer {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .heroTitle {
+    font-size: 2.5em;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .heroButton {
+    font-size: 1em;
+    margin-top: 20px;
+  }
+
+  .heroVideo {
+    display: none;
+  }
+
+  .mobileImage {
+    display: block;
+  }
+}

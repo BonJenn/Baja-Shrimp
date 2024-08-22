@@ -47,6 +47,7 @@
   margin-bottom: 0.3rem;
   color: var(--baja-red);
   font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .formGroup input,
