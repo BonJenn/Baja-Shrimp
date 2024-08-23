@@ -45,7 +45,7 @@ const Hero3_Catering = () => {
               <div className={styles.cateringContent}>
         <h2 className={styles.cateringTitle}>Catering Services</h2>
         <p className={styles.cateringDescription}>
-          Elevate your event with The Baja Shrimp's catering services. We bring the vibrant flavors of Baja-style cuisine to your special occasions. From concerts, festivals, corporate events, to weddings and family gatherings... our team ensures a memorable dining experience with our fresh, gourmet tacos, ceviche, and refreshing aguas frescas.w
+          Elevate your event with The Baja Shrimp's catering services. We bring the vibrant flavors of Baja-style cuisine to your special occasions. From concerts, festivals, film shoots, corporate events, to weddings and family gatherings... our team ensures a memorable dining experience with our fresh, gourmet tacos, ceviche, and refreshing aguas frescas.
         </p>
         <p className={styles.cateringDescription}>
           We offer both <strong>food truck</strong> and <strong>buffet</strong> catering. Pick what works best for your event!
