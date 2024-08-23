@@ -12,7 +12,7 @@ const Catering = ({ isOpen, onClose }) => {
   if (state.succeeded) {
     return (
       <div className={styles.modal}>
-        <div className={styles.modalContent}>
+        <div className={`${styles.modalContent} ${styles.successContent}`}>
           <h2 className={styles.formTitle}>Thank You!</h2>
           <p className={styles.successMessage}>Your catering request has been submitted. We'll get back to you shortly.</p>
           <button className={styles.closeButton} onClick={onClose}>&times;</button>

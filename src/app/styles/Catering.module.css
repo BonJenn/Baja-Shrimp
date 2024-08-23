@@ -17,14 +17,19 @@
   border-radius: 10px;
   width: 90%;
   max-width: 500px;
-  height: 90vh;
-  overflow-y: hidden;
+  max-height: 90vh; /* Changed from fixed height to max-height */
+  overflow-y: auto; /* Changed back to auto to allow scrolling if needed */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   font-family: 'Manrope', sans-serif;
   position: relative; /* Added to position the close button */
+}
+
+.successContent {
+  height: auto; /* Allow the success message to determine its own height */
+  max-height: none; /* Remove max-height constraint for success message */
 }
 
 .closeButton {
@@ -134,7 +139,7 @@
   .modalContent {
     padding: 1rem;
     width: 95%;
-    height: 95vh;
+    max-height: 95vh; /* Adjusted for mobile */
   }
 
   .formTitle {
