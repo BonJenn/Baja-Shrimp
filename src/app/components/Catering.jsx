@@ -73,7 +73,7 @@ const Catering = ({ isOpen, onClose }) => {
                   value="foodTruck"
                   required
                 />
-                Food Truck
+                <span>Food Truck</span>
               </label>
               <label>
                 <input
@@ -82,7 +82,7 @@ const Catering = ({ isOpen, onClose }) => {
                   value="buffet"
                   required
                 />
-                Buffet-style
+                <span>Buffet-style</span>
               </label>
             </div>
             <ValidationError prefix="Catering Style" field="cateringStyle" errors={state.errors} />
