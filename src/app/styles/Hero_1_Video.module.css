@@ -78,7 +78,7 @@
 }
 
 .heroButton:hover {
-  background-color: #d52b1e;
+  background-color:var(--baja-blue);
   color: #f5f5dc;
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
