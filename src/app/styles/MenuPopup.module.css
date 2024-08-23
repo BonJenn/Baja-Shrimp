@@ -16,10 +16,11 @@
     padding: 2rem;
     border-radius: 10px;
     width: 90%;
-    max-width: 800px;
+    max-width: 700px;
     max-height: 90%;
     overflow-y: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
   }
   
   .popup h2 {
@@ -57,18 +58,30 @@
   }
   
   .closeButton {
-    background-color: var(--baja-red);
-    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: var(--baja-red);
     border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
+    font-size: 0; /* Hide text content */
     cursor: pointer;
-    transition: background-color 0.3s;
+    line-height: 1;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .closeButton::before {
+    content: "\00D7";
+    font-size: 1.5rem; /* Restore font size for the X symbol */
   }
   
   .closeButton:hover {
-    background-color: var(--baja-blue);
+    color: var(--baja-blue);
   }
   
   @media (max-width: 768px) {
