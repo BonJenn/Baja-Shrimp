@@ -6,6 +6,9 @@ import Image from 'next/image';
 const Hero3_Catering = () => {
   const [isCateringOpen, setIsCateringOpen] = useState(false);
   const videoRef = useRef(null);
+  const [videoUrl, setVideoUrl] = useState('https://7s41bce4sdpfurqk.public.blob.vercel-storage.com/Baja_Catering_Video-Cfcdq8TewosobNvuczn9wQXV6LfcXL.mp4');
+  const [blob, setBlob] = useState(null);
+  const inputFileRef = useRef(null);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -21,9 +24,25 @@ const Hero3_Catering = () => {
     }
   }, []);
 
+  const handleUpload = async (event) => {
+    event.preventDefault();
+
+    const file = inputFileRef.current.files[0];
+    const filename = 'Baja_Catering_Video.mp4';
+
+    const response = await fetch(`/api/upload-video?filename=${filename}`, {
+      method: 'POST',
+      body: file,
+    });
+
+    const newBlob = await response.json();
+    setBlob(newBlob);
+    setVideoUrl(newBlob.url);
+  };
+
   return (
     <div className={styles.cateringContainer}>
-      <div className={styles.cateringContent}>
+              <div className={styles.cateringContent}>
         <h2 className={styles.cateringTitle}>Catering Services</h2>
         <p className={styles.cateringDescription}>
           Elevate your event with The Baja Shrimp's catering services. We bring the vibrant flavors of Baja-style cuisine to your special occasions. From concerts, festivals, corporate events, to weddings and family gatherings... our team ensures a memorable dining experience with our fresh, gourmet tacos, ceviche, and refreshing aguas frescas.
@@ -34,8 +53,7 @@ const Hero3_Catering = () => {
       </div>
       <div className={styles.videoWrapper}>
         <video ref={videoRef} className={styles.cateringVideo} autoPlay loop muted playsInline>
-          <source src="/images/catering/baja_catering_video.mp4" type="video/mp4" />
-          <source src="/images/catering/baja_catering_video.webm" type="video/webm" />
+          {videoUrl && <source src={videoUrl} type="video/mp4" />}
           Your browser does not support the video tag.
           <Image src="/images/catering/fallback_image.jpg" alt="Catering video fallback" width={800} height={600} />
         </video>
