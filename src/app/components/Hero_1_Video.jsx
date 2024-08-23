@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/Hero_1_Video.module.css';
+import MenuPopup from './MenuPopup';
 
 const Hero1_Video = () => {
-  const scrollToMenu = (e) => {
-    e.preventDefault();
-    const menuSection = document.getElementById('menu');
-    if (menuSection) {
-      menuSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const openMenu = () => {
+    setIsMenuOpen(true);
   };
 
   return (
@@ -19,9 +18,10 @@ const Hero1_Video = () => {
       <div className={styles.heroContainer}>
         <div className={styles.textContainer}>
           <h1 className={styles.heroTitle}>Where The Flavors of the Coast Meet the Streets</h1>
-          <button className={styles.heroButton} onClick={scrollToMenu}>VIEW MENU</button>
+          <button className={styles.heroButton} onClick={openMenu}>VIEW MENU</button>
         </div>
       </div>
+      {isMenuOpen && <MenuPopup onClose={() => setIsMenuOpen(false)} />}
     </div>
   );
 }
