@@ -12,9 +12,4 @@ export async function POST(request) {
   return NextResponse.json(blob);
 }
 
-// The next lines are required for Pages API Routes only
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+export const dynamic = 'force-dynamic';
