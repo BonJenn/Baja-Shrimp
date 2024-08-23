@@ -22,6 +22,7 @@
     font-weight: bold;
     margin: 0;
     line-height: 1.2;
+    color: var(--baja-red); /* Red color for the title */
     /* Removed text-shadow */
   }
   
@@ -34,19 +35,10 @@
     font-size: 2em;
     margin-bottom: 10px;
     position: relative;
-    color: var(--baja-red); /* Red color for the header */
+    color: var(--baja-blue); /* Blue color for the header */
   }
   
-  .menuSection h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 4px;
-    background-color: var(--baja-red); /* Red color for the line */
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-  }
+  /* Removed the ::after pseudo-element to get rid of the line under h2 */
   
   .menuSection ul {
     list-style: none;
@@ -58,5 +50,3 @@
     margin-bottom: 5px;
     color: var(--baja-red); /* Red color for the list items */
   }
-  
-  
