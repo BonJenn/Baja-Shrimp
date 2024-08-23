@@ -31,15 +31,17 @@ const Catering = ({ isOpen, onClose }) => {
             <input id="name" type="text" name="name" required />
             <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="phone">Telephone Number:</label>
-            <input id="phone" type="tel" name="phone" required />
-            <ValidationError prefix="Phone" field="phone" errors={state.errors} />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="email">Email:</label>
-            <input id="email" type="email" name="email" required />
-            <ValidationError prefix="Email" field="email" errors={state.errors} />
+          <div className={styles.formRow}>
+            <div className={styles.formGroup}>
+              <label htmlFor="phone">Telephone Number:</label>
+              <input id="phone" type="tel" name="phone" required />
+              <ValidationError prefix="Phone" field="phone" errors={state.errors} />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="email">Email:</label>
+              <input id="email" type="email" name="email" required />
+              <ValidationError prefix="Email" field="email" errors={state.errors} />
+            </div>
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="date">Event Date:</label>
