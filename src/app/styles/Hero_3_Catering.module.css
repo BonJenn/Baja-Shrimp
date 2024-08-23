@@ -13,6 +13,10 @@
   margin-bottom: 40px;
   max-width: 800px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .cateringTitle {
@@ -43,6 +47,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .cateringButton:hover {
@@ -88,5 +95,38 @@
   .cateringButton {
     font-size: 1em;
     padding: 12px 24px;
+  }
+}
+
+.servingTitle {
+  font-family: 'Francois One', sans-serif;
+  font-size: 1.8em;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.servingAreas {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .servingTitle {
+    font-size: 1.5em;
+  }
+
+  .servingAreas {
+    font-size: 1em;
+    max-width: 90%;
   }
 }

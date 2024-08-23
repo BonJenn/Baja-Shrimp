@@ -47,6 +47,9 @@ const Hero3_Catering = () => {
         <p className={styles.cateringDescription}>
           Elevate your event with The Baja Shrimp's catering services. We bring the vibrant flavors of Baja-style cuisine to your special occasions. From concerts, festivals, corporate events, to weddings and family gatherings... our team ensures a memorable dining experience with our fresh, gourmet tacos, ceviche, and refreshing aguas frescas.
         </p>
+        <p></p>
+        <p className={styles.servingTitle}>Proudly serving</p>
+        <p className={styles.servingAreas}>Los Angeles County · Orange County · San Diego County · Riverside County · San Bernardino County</p>
         <button className={styles.cateringButton} onClick={() => setIsCateringOpen(true)}>
           Request Catering
         </button>
