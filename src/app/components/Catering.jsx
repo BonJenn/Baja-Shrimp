@@ -15,7 +15,7 @@ const Catering = ({ isOpen, onClose }) => {
         <div className={styles.modalContent}>
           <h2 className={styles.formTitle}>Thank You!</h2>
           <p className={styles.successMessage}>Your catering request has been submitted. We'll get back to you shortly.</p>
-          <button onClick={onClose} className={styles.closeButton}>Close</button>
+          <button className={styles.closeButton} onClick={onClose}>&times;</button>
         </div>
       </div>
     );
@@ -64,6 +64,30 @@ const Catering = ({ isOpen, onClose }) => {
             <ValidationError prefix="Guests" field="guests" errors={state.errors} />
           </div>
           <div className={styles.formGroup}>
+            <label>Catering Style:</label>
+            <div className={styles.radioGroup}>
+              <label>
+                <input
+                  type="radio"
+                  name="cateringStyle"
+                  value="foodTruck"
+                  required
+                />
+                Food Truck
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="cateringStyle"
+                  value="buffet"
+                  required
+                />
+                Buffet-style
+              </label>
+            </div>
+            <ValidationError prefix="Catering Style" field="cateringStyle" errors={state.errors} />
+          </div>
+          <div className={styles.formGroup}>
             <label htmlFor="time">Serving Time Expected:</label>
             <input 
               id="time" 
@@ -84,7 +108,7 @@ const Catering = ({ isOpen, onClose }) => {
             Submit Request
           </button>
         </form>
-        <button onClick={onClose} className={styles.closeButton}>Close</button>
+        <button className={styles.closeButton} onClick={onClose}>&times;</button>
       </div>
     </div>
   );
