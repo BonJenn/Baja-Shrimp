@@ -130,3 +130,67 @@
     max-width: 90%;
   }
 }
+
+.eventsTitle {
+  font-family: 'Francois One', sans-serif;
+  font-size: 1.8em;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.eventsList {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.2em;
+  color: white;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.eventsList li {
+  margin: 5px 10px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.galleryButton {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--baja-blue);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.galleryButton:hover {
+  background-color: var(--baja-light-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .buttonContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cateringButton,
+  .galleryButton {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
