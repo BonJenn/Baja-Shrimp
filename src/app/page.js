@@ -10,6 +10,8 @@ import Hero5_Featured_Dishes from './components/Hero_5_Feaured_Dishes';
 import Hero6_Text from './components/Hero_6_Text';
 import Hero7_Contact from './components/Hero_7_Contact';
 import Footer from './components/Footer';
+import EmailSubscribers from './components/EmailSubscribers';
+
 export default function Page() {
   return (
     <div>
@@ -21,6 +23,7 @@ export default function Page() {
       <Hero5_Featured_Dishes />
       <Hero6_Text />
       <Hero7_Contact />
+      <EmailSubscribers />
       <Footer />
       {/* You can add more sections or components here */}
     </div>
