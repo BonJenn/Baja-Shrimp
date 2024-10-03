@@ -22,15 +22,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   
-  .emailInput {
+  .nameInputs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .inputField {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
     font-size: 1em;
+  }
+  
+  .nameInputs .inputField {
+    width: calc(50% - 5px);
+    margin-bottom: 0;
   }
   
   .subscribeButton {
@@ -42,6 +55,7 @@
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
   }
   
   .subscribeButton:hover {
@@ -63,8 +77,17 @@
       font-size: 1.8em;
     }
   
-    .emailInput,
+    .inputField,
     .subscribeButton {
       font-size: 0.9em;
+    }
+  
+    .nameInputs {
+      flex-direction: column;
+    }
+  
+    .nameInputs .inputField {
+      width: 100%;
+      margin-bottom: 10px;
     }
   }

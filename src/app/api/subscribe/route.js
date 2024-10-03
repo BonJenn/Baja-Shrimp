@@ -2,10 +2,10 @@ import axios from 'axios';
 import { NextResponse } from 'next/server';
 
 export async function POST(request) {
-  const { email } = await request.json();
+  const { firstName, lastName, email } = await request.json();
 
-  if (!email) {
-    return NextResponse.json({ error: 'Email is required' }, { status: 400 });
+  if (!email || !firstName || !lastName) {
+    return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
   }
 
   try {
@@ -16,6 +16,10 @@ export async function POST(request) {
     const data = {
       email_address: email,
       status: 'subscribed',
+      merge_fields: {
+        FNAME: firstName,
+        LNAME: lastName
+      }
     };
 
     const response = await axios.post(

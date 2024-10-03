@@ -19,11 +19,11 @@ export default function Page() {
       <Hero1_Video />
       <Hero2_Menu />
       <Hero3_Catering />
+      <EmailSubscribers />
       <Hero4_Carousel />
       <Hero5_Featured_Dishes />
       <Hero6_Text />
       <Hero7_Contact />
-      <EmailSubscribers />
       <Footer />
       {/* You can add more sections or components here */}
     </div>
