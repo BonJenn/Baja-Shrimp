@@ -22,13 +22,15 @@
     font-weight: bold;
     margin: 0;
     line-height: 1.2;
-    color: var(--baja-red); /* Red color for the title */
-    /* Removed text-shadow */
+    color: var(--baja-red);
+    text-align: center;
+    width: 100%;
   }
   
   .menuSection {
     font-family: 'Manrope', sans-serif;
     margin-top: 20px;
+    text-align: center;
   }
   
   .menuSection h2 {
@@ -36,6 +38,7 @@
     margin-bottom: 10px;
     position: relative;
     color: var(--baja-blue); /* Blue color for the header */
+    text-align: center;
   }
   
   /* Removed the ::after pseudo-element to get rid of the line under h2 */
@@ -49,4 +52,5 @@
     font-size: 1.2em;
     margin-bottom: 5px;
     color: var(--baja-red); /* Red color for the list items */
+    text-align: center;
   }
